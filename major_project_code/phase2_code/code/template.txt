@@ -1,0 +1,11 @@
+#context features
+U10:%x[-1,0] #previous word
+U00:%x[0,0] #current word
+U01:%x[1,0] #next word
+
+#combination features
+U02:%x[0,0]/%x[1,0] #combining next word with current
+U03:%x[-1,0]/%x[0,0] #combining prev word with current
+U04:%x[-1,0]/%x[0,0]/%x[1,0] #combining prev, current, next word
+
+

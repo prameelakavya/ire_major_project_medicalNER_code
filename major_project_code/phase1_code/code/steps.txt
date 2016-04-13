@@ -1,0 +1,25 @@
+Starting file for training data - 1gram.py
+
+On running this file, we get - nodes.txt
+
+Using these 2 txt files, and the template files - template_file_1gram and template_file_5grams - use the crflearn command to generate the model files - model_1gram and model_5grams
+
+crf_learn template_file train_file model_file
+
+We now go to the testing phase.
+
+The code to store the classes for the test data is similar to that of the training data - test_1gram.py
+
+On running this code, we get the nodes' files for the testing data - testnodes.txt
+
+Now, we run the file - convert_test_1gram.py - to convert the .txt files in the testing data into the appropriate format to run the model.
+
+On running these files, we get the output - test_tokens.txt
+
+We now run our models on this .txt file using the crf_test command and model_1gram and model_5grams respectively.
+
+crf_test model_file test_file
+
+The predicted classes are stored in the output files - output_1gram.txt and output_5grams.txt
+
+Now, we run compare_1gram.py and compare_5grams.py to compare the final class prediction accuracies.
